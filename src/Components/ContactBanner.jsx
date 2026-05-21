@@ -1,0 +1,35 @@
+import React from 'react'
+import banner from '../assets/Contact.png'
+import { NavLink } from 'react-router-dom'
+const ContactBanner = () => {
+  return (
+    <div className='relative h-80'>
+      <img src={banner} alt='banner' className='top-0 w-full h-full object-cover' />
+      <div className='absolute inset-0 bg-black/30'></div>
+      <div className='absolute inset-0 z-20 flex flex-col justify-center px-25 pt-10'>
+        <nav aria-label="Breadcrumb">
+          <ol className="flex items-center  gap-1 text-sm text-white">
+            <li>
+              <NavLink to='/' className='flex  text-white text-[14px] font-medium hover:underline'>Home</NavLink>
+            </li>
+
+            <li className="rtl:rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m9 20.247 6-16.5"></path>
+              </svg>
+            </li>
+
+            <li>
+              <a href="#"> Contact Us</a>
+            </li>
+          </ol>
+        </nav>
+        <h2 className='text-white text-4xl  mt-2'>Contact Us</h2>
+        <p className='text-white text-[16px] font-medium mt-3'>We will respond as soon as possible!</p>
+      </div>
+    </div>
+  )
+}
+
+export default ContactBanner
+
